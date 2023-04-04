@@ -3,19 +3,21 @@
  }
 
 
-/*Header*/
+           /*Header*/
+
+
  
 header {
     position: fixed;
     background-color: #373867;
-    width: 2000px;
-    height: 170px;
+    width: 3000px;
+    height: 100px;
 }
   
   .menu {
     display: inline-block;
     margin: 0 20px; 
-    margin-left: 300px;
+    margin-left: 200px;
   }
   
   .logo-1 {
@@ -31,62 +33,56 @@ header {
   
   .menu img {
     position: relative;
-    top: 20px; 
+    top: -20px; 
     left: 10px;
   }
   
   .logo-1 img {
     position: relative;
-    top: 50px;
-    left: 30px; 
+    top: 10px;
+    left: 10px; 
   }
   
   .logo-2 img {
     position: relative;
-    top: 40px;
+    top: 8px;
     left: 0 
   }
 
-  /*Sidebar*/
+
+
+            /*Sidebar*/
 
   aside {
     position: fixed;
     top: 0;
     background-color: #373867;
-    z-index: 100;
-    width: 300px;
+    width: 200px;
     height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .img-aside {
+    margin-top: 30px;
+    width: 50px;
+    height: 50px;
+  }
+
   aside li {
-    width: 200px;
-    padding: 15px;
+    width: 150px;
     border-bottom: 2px solid #C4C4C4;
   }
 
-  aside img {
-    margin-top: 60px;
-    margin-left: 5px;
-  }
-
   .list {
-    margin-top: 50px;
-    margin-left: 10px;
-    text-align: left;
+    margin-top: 30px;
   }
 
-  .list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
   
   .list li a {
     display: block;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 700;
     color: #C4C4C4;
     padding: 10px;
@@ -100,254 +96,368 @@ header {
  .contact .contact-subtitle {
     color: #49A37B;
     display: block;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
-    padding: 20px;
+    padding: 10px;
+    margin-left: -20px;
   }
 
   #navmain .contact ul li {
-    color: #C4C4C4;
     display: block;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 20px;
-  }
-
-  .contact-info {
-    position: relative;
-    top: -10px;
-    left: -10px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 0; 
     color: #C4C4C4;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px;
+    margin-top: 5px;
+    margin-left: -10px;
   }
-  .mail {
-    position: relative;
-    right: 24px;
-    bottom: 66px;
+
+  #navmain .contact ul li img {
+    width: 15px;
+    height: 15px;
   }
- .phone {
-    position: relative;
-    right: 31px;
-    bottom: 110px; 
- }
- .address {
-    position: relative;
-    right: 31px;
-    bottom: 110px; 
 
- }
 
- 
 
-  /*Seccion-1*/
+
+              /*Seccion-1*/
 
   .main-title {
-    font-style: normal;
-    color: rgba(47, 48, 88, 1);
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2F3058;
 }
 
   .section-1 {
     position: relative;
-    top: 250px;
-    left: 400px;
-    width: 800px;
+    top: 150px;
+    left: 250px;
+    border-bottom: 2px solid #D9D9D9;
+    margin-bottom: -50px;
+    padding-bottom: 50px
   }
  
 .section-1 h2 {
     margin-bottom: 20px;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 29px;
+    font-size: 20px;
+    line-height: 20px;
     color: #2F3058;
 }
 .section-1 p {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 21px;
     color: rgba(0, 0, 0, 0.75);
 }
 
+
 .image-container {
     float: right;
-    margin-top: -200px;
-    margin-right: 300px;
-  }
-
-
-  /*Seccion-2*/
-
-
-  .section-2 {
-    position: relative;
-    top: 400px;
-    left: 400px;
-    width: 800px;
-  }
-
-  .subtitle-1 {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 34px;
-    line-height: 40px;
-    color: #2F3058;
-  }
-
-  
-  .box-meet-us article {
-    display: inline-block;
-    width: 800px;
-  }
- 
-    .meet-us {
-        display: inline-block;
-        margin-bottom: 150px;
-        padding-right: 40px;
-    }
-  
-
-  .meet-us h3 {
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 29px;
-    color: #373867;
-  }
-
-  .meet-us p {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    color: #979797;
-  }
-
-  
-.about-us-section {
-    height: 800px;
-    border-bottom: 10px solid #D9D9D9;
-    margin-left: 400px;
-}
-
-.about-us-section h2 {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    font-size: 34px;
-    font-weight: bold;
-    color: #2F3058;
-}
-
-.about-us-section p {
-    margin-bottom: 30px;
-    font-size: 25px;
-    color: #6D6D6D;
-}
-
-.our-thoughts-container {
-    position: relative;
-    width: 1100px;
-}
-
-.our-thoughts-container h3 {
-    margin-bottom: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #2F3058;
-}
-
-.p1-our-thoughts {
-    position: absolute;
-    width: 780px;
-    right: 10px;
-    top: 50px;
-}
-
-.p2-our-thoughts {
-    position: absolute;
-    width: 380px;
-    bottom: -45px;
-    left: 310px;
-}
-
-.our-thoughts-container img {
+    margin-top: -300px;
     margin-right: 20px;
+  }
+
+
+
+         /*Seccion-2*/
+
+.section-2 {
+    margin-left: 60px;
+    border-bottom: 2px solid #D9D9D9;
 }
 
-.img2-our-thoughts {
-    position: absolute;
-    top: 120px;
-    right: 0;
-}
-
-.family-container {
-    position: relative;
-    width: 1000px;
-    height: 150px;
-    margin-top: 20px;
-}
-
-.family-container h3 {
-    position: absolute;
+.section-2 h2 {
+    margin-top: 250px;
+    margin-bottom: 100px;
+    margin-left: 200px;
     font-size: 30px;
     font-weight: bold;
     color: #2F3058;
 }
 
-.family-container p {
-    position: absolute;
-    width: 650px;
-    bottom: 0;
-}
 
-.gym-section h2 {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    margin-left: 500px;
-    font-size: 50px;
-    font-weight: bold;
-    color: #373867;
-}
-
-.gym-boxes {
+.section-2-boxes {
     display: inline-block;
-    width: 460px;
-    height: 190px;
-    margin-bottom: 100px;
-    margin-right: 500px;
-    margin-left: 500px;
-    border: 2px solid #46A37C;
-    border-radius: 10px;
+    width: 350px;
+    height: 250px;
+    margin-right: -150px;
+    margin-left: 250px;
+
 }
 
-.gym-boxes:last-child {
+.section-2-boxes img {
+    display: inline-block;
+    width: 100px;
+    padding-right: 10px;
+}
+
+
+.section-2-boxes div {
+    display: inline-block;
+    width: 100px;
+    margin-left: 30px;
+    
+}
+
+.section-2-boxes p {
     position: relative;
-    bottom: 30px;
+    width: 300px;
+    bottom: 40px;
+    font-size: 15px;
+    color: #979797;
 }
 
-.gym-boxes h3 {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    font-size: 35px;
-    font-weight: bold;
+.section-2-boxes h3 {
+    margin-bottom: 45px;
+    font-size: 18px;
     color: #373867;
 }
 
-.gym-boxes ol li {
-    margin-left: 40px;
-    margin-bottom: 5px;
-    font-size: 20px;
+          /*Section 3*/
+
+.contact-us {
+  height: 900px;
+  width: 1000px;
 }
+
+.section-3 {
+  position: relative;
+  height: 800px;
+  margin-top: 80px;
+  margin-left: 190px;
+  border-bottom: 1px solid #D9D9D9;
+  
+}
+
+.section-3 h2 {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #373867;
+}
+
+.section-3-container {
+  position: absolute;
+  top: 80px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.label-container {
+  display: inline-block;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.section-3-buttons {
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  right: 10px;
+  margin-top: 30px;
+}
+
+
+input[type="checkbox"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.label-container input[name="first-name"],
+.label-container input[name="lastname"],
+.label-container input[name="email"] {
+  width: 400px;
+}
+
+.checkbox-container {
+  margin-top: 10px;
+}
+
+.checkbox-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.motive-container:nth-child(3) {
+  margin-top: 20px;
+}
+
+.motive-container:nth-child(3) label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+
+       /*section 4*/
+
+.section-4 {
+  width: 600px; 
+  margin-left: 250px;
+  height: 900px;
+  margin-top: -20px;
+  border-bottom: 2px solid #D9D9D9;
+
+}
+
+.section-4 h2 {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2F3058;
+}
+
+.section-4 p {
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: #6D6D6D;
+}
+
+.our-thoughts {
+  position: relative;
+  width: 1100px;
+}
+
+.our-thoughts h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2F3058;
+}
+
+.our-thoughts-box1 {
+  position: absolute;
+  width: 780px;
+  right: 30px;
+  top: 50px;
+}
+
+
+.our-thoughts-box2 {
+  position: absolute;
+  width: 880px;
+  right: -70px;
+  top: 80px;
+}
+
+
+.our-thoughts-box3 {
+  position: absolute;
+  width: 380px;
+  bottom: -45px;
+  left: 280px;
+}
+
+
+.img-2 {
+  position: absolute;
+  width: 400px;
+  top: 120px;
+  right: 40px;
+}
+
+.we-are-family {
+  position: relative;
+  width: 1000px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+.we-are-family h3 {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2F3058;
+}
+
+.we-are-family p {
+  position: absolute;
+  width: 650px;
+  bottom: 0;
+}
+
+
+
+        /*section 5*/
+
+
+.section-5 h2 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 250px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #373867;
+}
+
+.info-box {
+  display: inline-block;
+  width: 350px;
+  height: 150px;
+  margin-bottom: 60px;
+  margin-right: -150px;
+  margin-left: 250px;
+  border: 2px solid #46A37C;
+  border-radius: 5px;
+}
+
+.info-box:last-child {
+  position: relative;
+  bottom: 30px;
+}
+
+.info-box h3 {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #373867;
+}
+
+.info-box ol li {
+  margin-left: 40px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+
+         /*Footer*/
+
 
 footer {
-    width: 1680px;
+    width: 1300px;
     height: 100px;
-    margin-left: 250px;
-    padding-top: 40px;
+    margin-left: 1px;
+    padding-top: 50px;
     background-color: #2C2C3A;
     text-align: center;
 }
@@ -357,6 +467,8 @@ footer p {
 }
 
 footer a img {
+  width: 30px;
+  height: 30px;
     padding-right: 25px;
     padding-bottom: 10px;
 }

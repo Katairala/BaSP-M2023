@@ -15,7 +15,7 @@ Most of the content is in the main section, where the gym's philosophy and equip
 The page also has a "About Us" section where the gym's roots and history are presented. Finally, there's a "Contact" section that includes a form where visitors can send their questions or comments to the gym's team.
 
 ## Week 03
-This week, we had to use CSS to make the HTML from week 2 look as close as possible to the design created in Figma in week 1.
+This week, we had to use CSS to make the HTML from week 2 look as close as possible to the design created in Figma in week 1. The HTML code imports two CSS files, "reset.css" and "style.css," to apply styles to the page. The "reset.css" file resets the default styles of HTML elements, and the "style.css" file contains custom styles for the page's components.
 
 ## Authors
 - Katherine Airala
