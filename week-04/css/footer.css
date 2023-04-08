@@ -1,0 +1,39 @@
+footer {
+    width: 600px;
+    height: 81px;
+    padding-top: 20px;
+    background-color: #2C2C3A;
+    text-align: center;
+}
+
+footer p {
+    font-weight: 400;
+    font-size: 11px;
+    color: #46A37C;
+}
+
+footer a img {
+  width: 24.17px;
+  height: 23.33px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+
+/*IPAD*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    footer {
+        width: 834px;
+        height: 98px;
+    }
+
+    footer a img {
+        width: 28px;
+      }
+
+    footer p {
+        font-size: 16px;
+    }
+}

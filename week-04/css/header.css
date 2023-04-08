@@ -1,0 +1,96 @@
+/*HEADER*/
+
+
+
+header {
+    background: #373867;
+    padding-top: 30px;
+    width: 600px;
+    min-height: 84px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;  
+}
+
+
+.menu {
+    width: 16px;
+    padding-left: 20px;
+    margin-right: 100px;
+}
+
+.logo-1 {
+    width: 43.9px;
+    height: 43.03;
+}
+
+.branding {
+   width: 400px;
+   height: 34.03px;
+   padding: 10px 0 0 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .aside {
+        display: none;
+    }
+}
+
+
+/*IPAD VERSION*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    header {
+        width: 834px;
+    }
+    
+    
+    .menu {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .logo-1 {
+        padding-left: 80px;
+        width: 50px;
+        height: 53.94px;
+    }
+    
+    .branding {
+        margin-top: 5px;
+        width: 800.82px;
+        height: 45.91px;
+        
+    }
+
+}
+    
+
+
+    /* DESKTOP*/
+
+ @media screen and (min-width: 1000px) {
+    header {
+        width: 100%;
+        max-width: 1269px;
+        margin-left: 160px;
+        min-height: 116px;
+      }
+      
+      .menu {
+        padding-left: 15px;
+      }
+    
+      .logo-1 {
+        width: 68px;
+        height: auto;
+
+      }
+    
+      .branding {
+        width: auto;
+        margin: 0;
+      }
+ }
