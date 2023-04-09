@@ -22,7 +22,7 @@ footer a img {
 
 /*IPAD*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) {
 
     footer {
         width: 834px;
@@ -36,4 +36,24 @@ footer a img {
     footer p {
         font-size: 16px;
     }
+}
+
+
+/* DESKTOP*/
+
+@media only screen and (min-width: 900px) {
+    footer {
+        width: 1155px;
+        height: 99px;
+        padding-left: 10%;
+    }
+
+    footer a img {
+        width: 34px;
+      }
+
+    footer p {
+        font-size: 16px;
+    }
+
 }

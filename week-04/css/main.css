@@ -4,7 +4,7 @@
 
 .main {
   margin-left: 15%;
-  margin-top: 20px;
+  margin-top: 150px;
   margin-bottom: 50px;
 }
 
@@ -45,7 +45,7 @@
 
 /*IPAD*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 600px){
 
 .image-1 {
   width: 595px;
@@ -68,6 +68,31 @@
 }
 
 
+
+/* DESKTOP*/
+
+@media only screen and (min-width: 900px) {
+
+  .main {
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .main-title {
+    font-size: 45px;
+  }
+
+  .section-1 h2 {
+    width: 613px;
+    padding: 20px 0 20px 0;
+    font-size: 25px;
+  }
+
+  
+
+
+}
 
 
 /*SECTION-2*/
@@ -113,20 +138,20 @@
 
 
 
+
+/* DESKTOP*/
+
+@media only screen and (min-width: 900px) {
+
+}
+
   /*SECTION 3*/
 
 
 .section-3 h2 {
-    padding: 20px 0 40px 0px;
+    padding: 20px 0 40px 0;
 }
 
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-  }
-  
   .label-container {
     display: flex;
     flex-direction: column;
@@ -147,15 +172,12 @@
     padding: 10px;
     border-radius: 5px;
     border: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px grey;
     margin-top: 5px;
   }
   
-  .contact-form button[type="submit"],
-  .contact-form button[type="reset"] {
+  .section-3-buttons {
     padding: 10px 20px;
-    background-color: rgba(55, 56, 103, 1);
-    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -167,6 +189,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 400px;
   }
   
   .checkbox-container label {
@@ -181,7 +204,51 @@
   }
 
 
+/* DESKTOP*/
 
+@media only screen and (min-width: 900px) {
+
+  .section-3 {
+    height: 600px;
+  }
+
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .section-3-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .label-container {
+    width: 45%;
+  }
+
+  .checkbox-container {
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .section-3-buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+  }
+
+}
 
 
   /*SECTION 4*/
@@ -212,7 +279,7 @@
 
 /*IPAD*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 600px){
   
   .section-4 p {
       font-size: 20px;
@@ -257,8 +324,7 @@
 
 /*IPAD*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
+@media only screen and (min-width: 768px) {
 .info-box ol li {
   font-size: 16px;
 }

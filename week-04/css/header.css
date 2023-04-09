@@ -3,6 +3,8 @@
 
 
 header {
+    position: fixed;
+    top: 0;
     background: #373867;
     padding-top: 30px;
     width: 600px;
@@ -11,7 +13,7 @@ header {
 
 .container {
     display: flex;
-    flex-direction: row;  
+    align-items: flex-start;
 }
 
 
@@ -32,16 +34,12 @@ header {
    padding: 10px 0 0 40px;
 }
 
-@media screen and (max-width: 900px) {
-    .aside {
-        display: none;
-    }
-}
+
 
 
 /*IPAD VERSION*/
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) {
     header {
         width: 834px;
     }
@@ -66,31 +64,44 @@ header {
     }
 
 }
+
     
 
 
     /* DESKTOP*/
 
- @media screen and (min-width: 1000px) {
+    @media only screen and (min-width: 900px) {
+
     header {
-        width: 100%;
+        width: 1130px;
         max-width: 1269px;
         margin-left: 160px;
         min-height: 116px;
+        display: flex;
+        align-items: center;
       }
       
+      
+    
       .menu {
-        padding-left: 15px;
+        padding-left: 5%;
       }
     
       .logo-1 {
         width: 68px;
         height: auto;
-
+        padding-left: 2%;
       }
     
       .branding {
         width: auto;
         margin: 0;
+        padding-left: 2%;
       }
- }
+    }
+  
+    
+    
+    
+    
+ 
