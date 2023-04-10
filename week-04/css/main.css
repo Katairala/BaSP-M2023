@@ -1,22 +1,28 @@
-/* SECTION 1*/
-
-/*MOBILE*/
-
 .main {
-  margin-left: 15%;
-  margin-top: 150px;
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  margin-top: 9.375rem;
+}
+
+.section-1{
+  width: 80%;
 }
 
 .main-title {
-  font-size: 35px;
+  font-size: 2.200rem;
   font-weight: 700;
   color: rgba(47, 48, 88, 1);
 }
 
+.main-title span {
+    color: #616180;
+}
+
 .image-1 {
-    width: 406px;
-    height: 375px;
+    width: 306px;
+    height: 275px;
     margin-top: 30px;
     border-radius: 22px;
 }
@@ -26,289 +32,247 @@
 }
 
 .section-1 h2 {
-   width: 270px;
+   width: 16.875rem;
     font-weight: 600;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 .section-1 p {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.900rem;
     color: rgba(0, 0, 0, 0.75);
 }
 
-.section-1 hr {
-    border: 2px solid #ccc;
-    margin-top: 40px;
-}
-
-
-/*IPAD*/
-
 @media only screen and (min-width: 600px){
 
-.image-1 {
-  width: 595px;
-}
-
-.main-title {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.section-1 h2 {
-  width: 347px;
-  padding: 20px;
-}
-
-.section-1 p {
-  font-size: 16px;
-}
-
-}
-
-
-
-/* DESKTOP*/
-
-@media only screen and (min-width: 900px) {
-
-  .main {
-    margin-left: 20%;
-    margin-top: 20px;
-    margin-bottom: 50px;
+  .image-1 {
+    width: 595px;
   }
   
   .main-title {
-    font-size: 45px;
+    font-size: 48px;
+    font-weight: 700;
   }
-
-  .section-1 h2 {
-    width: 613px;
-    padding: 20px 0 20px 0;
-    font-size: 25px;
-  }
-
   
+  .section-1 h2 {
+    width: 347px;
+    font-size: 24px;
+    padding: 20px;
+  }
+  
+  .section-1 p {
+    font-size: 16px;
+  }
+  
+ }
 
+@media only screen and (min-width: 1020px) {
 
+  .section-1 {
+    margin-left: 20%;
+    margin-bottom: 50px;
+  }
 }
 
 
-/*SECTION-2*/
 
 .section-2 {
-    margin-top: 30px;
+  width: 80%;
+  margin-top: 1.9rem;
 }
 
 .section-2 h2 {
-  padding-bottom: 30px;
+padding-bottom: 1.9rem;
 }
 
-.section-2 {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    flex-direction: column; 
-  }
-  
-  .section-2-boxes {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    margin-bottom: 2rem; 
-  }
-  
-  .section-2-boxes img {
-    width: 91.8px;
-    margin-right: 1rem; 
-  }
+.section-2-boxes {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  margin-bottom: 2rem; 
+}
 
-  .section-2 p {
-    font-weight: 700;
-    font-size: 14px;
-    color: rgba(151, 151, 151, 1);
+.section-2-boxes img {
+  width: 91.8px;
+  margin-right: 1rem; 
+}
 
-  }
+.section-2 p {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: rgba(151, 151, 151, 1);
 
-.section-2 hr {
-    border: 2px solid #ccc;
-    margin-top: 40px;
 }
 
 
-
-
-/* DESKTOP*/
-
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1020px) {
 
 }
 
-  /*SECTION 3*/
-
-
+.section-3 {
+  width: 80%;
+}
 .section-3 h2 {
-    padding: 20px 0 40px 0;
+  padding: 1.3rem 0 2.5rem 0;
 }
 
-  .label-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .section-3 p {
-    padding: 20px 0 20px 0;
-    font-weight: 500;
-    font-size: 14px;
-    color: rgba(55, 56, 103, 1) ;
-  }
-
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0 0 5px grey;
-    margin-top: 5px;
-  }
-  
-  .section-3-buttons {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-
-
-  .checkbox-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 400px;
-  }
-  
-  .checkbox-container label {
-    margin-left: 30px;
-  }
-
-  .message {
-    padding: 20px 0 20px 0;
-    font-weight: 500;
-    font-size: 14px;
-    color: rgba(55, 56, 103, 1) ;
-  }
-
-
-/* DESKTOP*/
-
-@media only screen and (min-width: 900px) {
-
-  .section-3 {
-    height: 600px;
-  }
-
-  .contact-us {
-    display: flex;
-    flex-direction: column;
-  }
-
-  form {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self: center;
-    width: 100%;
-    margin: 0;
-  }
-
-  .section-3-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .label-container {
-    width: 45%;
-  }
-
-  .checkbox-container {
-    width: 100%;
-    margin-top: 14px;
-  }
-
-  .section-3-buttons {
-    display: flex;
-    justify-content: flex-end;
-    width: 90%;
-  }
-
+.label-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 
-  /*SECTION 4*/
-  
-  .section-4 img {
-    width: 111px;
-    height: 83;
-  }
+.section-3 p {
+  padding: 20px 0 20px 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: rgba(55, 56, 103, 1) ;
+}
 
 
-  .section-4 h2 {
-    margin: 40px 0 40px 0;
+input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px grey;
+  margin-top: 5px;
+}
+
+textarea {
+ width: 19rem;
+ height: 5rem;
+}
+
+.section-3-buttons {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.checkbox-container label {
+  margin-left: 20px;
+}
+
+.message {
+  padding: 20px 0 20px 0;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(55, 56, 103, 1) ;
+}
+
+
+@media only screen and (min-width: 1020px) {
+
+.section-3 {
+  margin-left: 20%;
+    margin-bottom: 50px;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-self: center;
+  width: 100%;
+  margin: 0;
+}
+
+.section-3-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.label-container {
+  width: 45%;
+}
+
+.checkbox-container {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.section-3-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+textarea {
+  width: 60rem;
+  height: 5rem;
+ }
+
+}
+
+
+.section-4 {
+  width: 80%;
+}
+
+.section-4 img {
+  width: 111px;
+  height: 83;
+}
+
+.section-4 h2 {
+  margin: 2.5rem 0 2.5rem 0;
 }
 
 .section-4 p {
-  font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 10px;
-    color: rgba(109, 109, 109, 1);
+font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 16px;
+  margin-bottom: 10px;
+  color: rgba(109, 109, 109, 1);
 
 }
 
 .section-4 h3 {
-  margin: 20px 0 20px 0;
+margin: 20px 0 20px 0;
 }
 
 
-/*IPAD*/
-
-@media only screen and (min-width: 600px){
-  
-  .section-4 p {
-      font-size: 20px;
-      line-height: 23.44px;
+.section-5 {
+  width: 80%;
+  margin-bottom: 7rem;
 }
-}
-
-
-/*SECTION 5*/
-
 
 .section-5 h2 {
-  margin: 40px 0 40px 0;
+  margin: 2.5rem 0 2.5rem 0;
 }
 
 .info-box {
-  width: 80%;
-  height: 50%;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  width: 95%;
+  height: 22%;
+  margin-bottom: 15px;
+  margin-left: 5px;
   border: 2px solid #46A37C;
   border-radius: 5px;
 }
 
 .info-box h3 {
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-top: 7px;
+  margin-left: 15px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
   font-weight: bold;
   color: #373867;
 }
@@ -317,16 +281,9 @@
   margin-left: 40px;
   margin-bottom: 5px;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.9rem;
   line-height: 18.75px;
   color: #373867;
 }
 
-/*IPAD*/
-
-@media only screen and (min-width: 768px) {
-.info-box ol li {
-  font-size: 16px;
-}
-}
 
