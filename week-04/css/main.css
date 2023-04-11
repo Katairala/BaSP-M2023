@@ -17,36 +17,37 @@
 }
 
 .main-title span {
-    color: #616180;
+  color: #616180;
 }
 
 .image-1 {
-    width: 306px;
-    height: 275px;
-    margin-top: 30px;
-    border-radius: 22px;
+  width: 306px;
+  height: 275px;
+  margin-top: 30px;
+  border-radius: 22px;
 }
 
 .image-container {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .section-1 h2 {
-   width: 16.875rem;
-    font-weight: 600;
-    padding: 1.25rem;
+  width: 16.875rem;
+  font-weight: 600;
+  padding: 1.25rem;
 }
 
 .section-1 p {
-    font-weight: 400;
-    font-size: 0.900rem;
-    color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+  font-size: 0.900rem;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 @media only screen and (min-width: 600px){
 
   .image-1 {
-    width: 595px;
+    width: 500px;
+    height: 300px;
   }
   
   .main-title {
@@ -63,7 +64,6 @@
   .section-1 p {
     font-size: 16px;
   }
-  
  }
 
 @media only screen and (min-width: 1020px) {
@@ -72,9 +72,13 @@
     margin-left: 20%;
     margin-bottom: 50px;
   }
+
+  .image-container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10%;
+  }
 }
-
-
 
 .section-2 {
   width: 80%;
@@ -104,7 +108,6 @@ padding-bottom: 1.9rem;
 
 }
 
-
 @media only screen and (min-width: 1020px) {
   .section-2 {
     margin-left: 20%;
@@ -113,13 +116,15 @@ padding-bottom: 1.9rem;
   .section-2 .colum {
     width: 70%;
     display: flex;
-    justify-content: space-between;
     padding: 20px;
   }
 
-
-  
+.section-2-boxes {
+  padding-right: 50px;
 }
+
+}
+
 
 .section-3 {
   width: 80%;
@@ -134,14 +139,12 @@ padding-bottom: 1.9rem;
   margin-bottom: 20px;
 }
 
-
 .section-3 p {
   padding: 20px 0 20px 0;
   font-weight: 500;
   font-size: 0.9rem;
   color: rgba(55, 56, 103, 1) ;
 }
-
 
 input[type="text"],
 input[type="email"] {
@@ -182,7 +185,6 @@ textarea {
   font-size: 14px;
   color: rgba(55, 56, 103, 1) ;
 }
-
 
 @media only screen and (min-width: 1020px) {
 
@@ -234,14 +236,13 @@ textarea {
 
 }
 
-
 .section-4 {
   width: 80%;
 }
 
 .section-4 img {
-  width: 111px;
-  height: 83;
+  width: 10rem;
+  height: 8rem;
 }
 
 .section-4 h2 {
@@ -254,11 +255,23 @@ font-weight: 400;
   line-height: 16px;
   margin-bottom: 10px;
   color: rgba(109, 109, 109, 1);
-
 }
 
 .section-4 h3 {
 margin: 20px 0 20px 0;
+}
+
+.our-thoughts-box {
+  display: flex;
+}
+
+.our-thoughts-text {
+  padding-left: 10px;
+}
+
+.family-box{
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 @media only screen and (min-width: 1020px) {
@@ -268,7 +281,6 @@ margin: 20px 0 20px 0;
     width: 70%;
   }
 }
-
 
 .section-5 {
   width: 80%;
@@ -306,7 +318,6 @@ margin: 20px 0 20px 0;
   color: #373867;
 }
 
-
 @media only screen and (min-width: 1020px) {
 
 .section-5 {
@@ -322,5 +333,5 @@ margin: 20px 0 20px 0;
 .info-box {
   width: 40%;
   height: 9rem;
-}
+ } 
 }
