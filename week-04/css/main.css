@@ -8,6 +8,8 @@
 
 .section-1{
   width: 80%;
+  padding-bottom: 20px;
+  border-bottom: #d9d9d9 2px solid
 }
 
 .main-title {
@@ -82,7 +84,8 @@
 
 .section-2 {
   width: 80%;
-  margin-top: 1.9rem;
+  margin-top: 1rem;
+  border-bottom: #d9d9d9 2px solid
 }
 
 .section-2 h2 {
@@ -122,12 +125,11 @@ padding-bottom: 1.9rem;
 .section-2-boxes {
   padding-right: 50px;
 }
-
 }
-
 
 .section-3 {
   width: 80%;
+  border-bottom: #d9d9d9 2px solid
 }
 .section-3 h2 {
   padding: 1.3rem 0 2.5rem 0;
@@ -238,6 +240,8 @@ textarea {
 
 .section-4 {
   width: 80%;
+  padding-bottom: 20px;
+  border-bottom: #d9d9d9 2px solid
 }
 
 .section-4 img {

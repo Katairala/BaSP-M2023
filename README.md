@@ -17,5 +17,9 @@ The page also has a "About Us" section where the gym's roots and history are pre
 ## Week 03
 This week, we had to use CSS to make the HTML from week 2 look as close as possible to the design created in Figma in week 1. The HTML code imports two CSS files, "reset.css" and "style.css," to apply styles to the page. The "reset.css" file resets the default styles of HTML elements, and the "style.css" file contains custom styles for the page's components.
 
+## Week 04
+This week we created the landing page for the Mega Rocket website, but this time we used the flexbox property to make the page responsive using the "mobile first" philosophy. We also created the mobile version (maximum 600px), iPad version (maximum 1020px), and desktop version (1020px and beyond).
+This week, we also set up GitHub Pages to create a live repository. Through the following link, you can access my repository to see the updated index for this week: https://katairala.github.io/BaSP-M2023/week-04/.
+
 ## Authors
 - Katherine Airala
