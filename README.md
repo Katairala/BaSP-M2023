@@ -21,5 +21,8 @@ This week, we had to use CSS to make the HTML from week 2 look as close as possi
 This week we created the landing page for the Mega Rocket website, but this time we used the flexbox property to make the page responsive using the "mobile first" philosophy. We also created the mobile version (maximum 600px), iPad version (maximum 1020px), and desktop version (1020px and beyond).
 This week, we also set up GitHub Pages to create a live repository. Through the following link, you can access my repository to see the updated index for this week: https://katairala.github.io/BaSP-M2023/week-04/.
 
+## Week 05
+The objective of this week was to understand the syntax of JavaScript in order to solve problems and acquire the ability to propose a valid solution for a particular problem. For this purpose, a series of exercises were provided to us, which we had to solve and save in the Github repository. We learned the uses of loops, arrays, functions, variables, and operations. Through the following link, you can see the index where the exercises are saved in the console. https://katairala.github.io/BaSP-M2023/week-05/.
+
 ## Authors
 - Katherine Airala

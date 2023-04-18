@@ -1,72 +1,52 @@
-@media screen and (max-width: 1024px) {
-  .aside {
-    display: none;
-  }
-}
-
 aside {
+  display: none;
   position: fixed;
-  top: 0;
-  right: 83.93%;
-  width: 243px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  width: 220px;
+  height: 100%;
   background-color: #373867;
 }
 
 .img-aside {
-  margin: 10% 0 0 5%;
-  width: 50px;
-  height: 50px;
+  align-self: center;
+  width: 7rem;
+  height: 4rem;
+  margin-top: 34px;
 }
 
 aside li {
-  width: 150px;
-  border-bottom: 2px solid #C4C4C4;
+  border-bottom: 2px solid #c4c4c4;
 }
 
-
 .list {
-  margin: 1.875rem 0 0 1.25rem;
+  margin: 1.6rem 0 0 0;
 }
 
 .list li a {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   font-size: 25px;
   font-weight: 700;
-  color: #C4C4C4;
-  padding: 15px;
+  color: #c4c4c4;
+  padding: 1rem;
 }
 
-
 li.contact > a {
-  color: #49A37B;
+  color: #49a37b;
 }
 
 .contact .contact-subtitle {
-  color: #49A37B;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  text-align: right;
+  color: #49a37b;
   font-size: 15px;
   font-weight: 700;
-  padding: 10px 0 10px 5px;
+  padding: 0.5rem 0 1rem 0.5rem;
 }
 
 #navmain .contact ul li {
-  display: flex;
-  align-items: center;
-  color: #C4C4C4;
+  color: #c4c4c4;
   font-size: 10px;
   font-weight: 700;
-  padding: 10px;
-  margin-top: 5px;
-  margin-left: auto;
+  padding: 0.5rem;
 }
 
 #navmain .contact ul li img {
@@ -74,3 +54,9 @@ li.contact > a {
   height: 15px;
 }
 
+@media screen and (min-width: 1024px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+  }
+}
