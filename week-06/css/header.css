@@ -1,0 +1,38 @@
+header {
+    position: fixed;
+    top: 0;
+    background: #373867;
+    padding-top: 30px;
+    width: 100%;
+    height: 80px;;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+}
+
+.menu {
+    width: 16px;
+    padding-left: 0.625rem;
+    padding-right: 0.938rem;
+}
+
+.logo-1 {
+    width: 42px;
+    height: 30px;
+    margin: 0 2rem 1rem 1rem;
+}
+
+.branding {
+   width: 26rem;
+   height: 2.125rem;
+   padding: 0.600rem 3rem 0 0;
+}
+
+
+    
+    
+ 
