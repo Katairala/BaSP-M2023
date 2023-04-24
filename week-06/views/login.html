@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/login.css" />
-    <script src="../js/login.js"></script>
     <title>Mega Rocket GYM</title>
   </head>
   <body>
@@ -41,16 +40,18 @@
               src="../../assets/signin.png"
               alt="mail icon"
             />
-            <input type="email" id="email" />
+            <input id="email" type="text" name="email" />
           </label>
+          <p id="emailError" hidden></p>
           <label>
             <img
               class="password-img"
               src="../../assets/password.png"
               alt="lock icon"
             />
-            <input type=" password" id="password" />
+            <input id="password" type=" password" name="password" />
           </label>
+          <p id="errorMessage" hidden></p>
           <div class="remember-me">
             <input type="checkbox" name="checkbox" />
             <label for="checkbox"> Remember me </label>
@@ -63,7 +64,7 @@
             />
             <a href="a" class="link">Forgot your password?</a>
           </div>
-          <button id="button-signin">Sign In</button>
+          <button id="submit">Sign In</button>
           <button id="button-signup">Sign Up</button>
         </form>
       </div>
@@ -76,5 +77,6 @@
       </div>
       <p>Copyright &copy; 2023 MegaRocket SA. All rights reserved.</p>
     </footer>
+    <script src="../js/login.js"></script>
   </body>
 </html>

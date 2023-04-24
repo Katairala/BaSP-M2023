@@ -37,59 +37,74 @@
       <div class="form-container">
       <div class="label-container">
         <label for="name"></label>
-        <input type="text" name="name" placeholder="Name" />
+        <input type="text" id="name" name="name" placeholder="Name">
+        <p id="name-error" class="error-message"></p>
       </div>
       <div class="label-container">
         <label for="name"></label>
-        <input type="text" name="lastname" placeholder="Last Name" />
+        <input type="text" id="lastname" name="lastname" placeholder="Last-Name">
+        <p id="lastname-error" class="error-message"></p>
       </div>
       <div class="label-container">
-        <label for="Document"></label>
-        <input type="Document" name="Document" placeholder="Document" />
+        <label for="I.D."></label>
+        <input id="ID" type="text" name="ID" placeholder="I.D." />
+        <p id="id-error" class="id-error"></p>
       </div>
       <div class="label-container">
         <label for="Date-of-birth"></label>
-        <input type="Date-of-birth" name="Date-of-birth" placeholder="Date-of-birth-(dd/mm/aaaa)" />
+        <input id="date" type="date" name="Date" placeholder="Date-of-birth-(dd/mm/aaaa)" />
+        <p id="date-error" class="date-error"></p>
       </div>
       <div class="label-container">
         <label for="Phone-number"></label>
-        <input type="Phone-number" name="Phone-number" placeholder="Phone-number" />
+        <input id="phone" type="text" name="Phone" placeholder="Phone-number" />
+        <p id="phone-error" class="phone-error"></p>
       </div>
       <div class="label-container">
         <label for="Address"></label>
-        <input type="Address" name="Address" placeholder="Address" />
+        <input id="address" type="text" name="Address" placeholder="Address" />
+        <p id="address-error" class="error-message"></p>
       </div>
       <div class="label-container">
-        <label for="State"></label>
-        <input type="State" name="State" placeholder="State" />
+        <label for="City"></label>
+        <input id="City" type="text" name="City" placeholder="City" />
+        <p id="city-error" class="error-message"></p>
       </div>
       <div class="label-container">
         <label for="Zip"></label>
-        <input type="Zip" name="Zip" placeholder="Zip" />
+        <input id="zip" type="text" name="Zip" placeholder="Zip" />
+        <p id="zip-error" class="error-message"></p>
       </div>
       <div class="label-container">
         <label for="email"></label>
-        <input type="email" name="email" placeholder="Email" />
+        <input id="email" type="email" name="email" placeholder="Email" />
+        <p id="email-error" class="error-message"></p>
       </div>
       <div class="label-container">
-        <label for="Password"></label>
-        <input type="Password" name="Password" placeholder="Password" />
+        <label for="password"></label>
+        <input id="password" type="password" name="password" placeholder="Password" />
+        <p id="password-error" class="error-message"></p>
       </div>
       <div class="label-container">
-        <label for="Repeat-password"></label>
-        <input type="Repeat-password" name="Repeat-password" placeholder="Repeat-password" />
+        <label for="Repeat"></label>
+        <input id="Repeat" type="password" name="Repeat" placeholder="Repeat-password" />
+        <p id="repeat-error" class="error-message"></p>
       </div>
     </div>
-      <button id="button-signup">Sign Up</button>
+      <button id="submit">Sign Up</button>
     </form>
-  </main>
-  <footer>
+    </main>
+    <footer>
     <div>
       <a href="#"><img src="../../assets/Icono-tw.png" alt="Twitter" /></a>
       <a href="#"><img src="../../assets/Icono-ig.png" alt="Instagram" /></a>
       <a href="#"><img src="../../assets/Icono-fb.png" alt="Facebook" /></a>
     </div>
     <p>Copyright &copy; 2023 MegaRocket SA. All rights reserved.</p>
-  </footer>
+    </footer>
+   <script src="../js/sign-up.js"></script>
   </body>
 </html>
+
+
+
