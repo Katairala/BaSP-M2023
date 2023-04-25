@@ -1,73 +1,68 @@
-var passwordInput = document.getElementById('password');
-var errorMessage = document.getElementById('errorMessage');
-var emailInput = document.getElementById('email');
-var emailError = document.getElementById('emailError');
+var passwordInput = document.getElementById("password");
+var emailInput = document.getElementById("email");
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-var submitButton = document.getElementById('submit');
+var submitButton = document.getElementById("submit");
 
-passwordInput.addEventListener('blur', function () {
+passwordInput.addEventListener("blur", validatePassword);
+passwordInput.addEventListener("focus", clearPassword);
+emailInput.addEventListener("blur", validateEmail);
+emailInput.addEventListener("focus", clearEmail);
+
+function validatePassword() {
   var password = passwordInput.value;
-  var containsLetter = false;
-  var containsNumber = false;
-
-  for (var i = 0; i < password.length; i++) {
-    var char = password.charAt(i);
-    if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
-      containsLetter = true;
-    } else if (char >= '0' && char <= '9') {
-      containsNumber = true;
-    }
-  }
-
-  if (!containsLetter || !containsNumber) {
-    errorMessage.textContent =
-      'One or more fields are incorrect';
-    errorMessage.removeAttribute('hidden');
-  }
-});
-
-passwordInput.addEventListener('focus', function () {
-  errorMessage.setAttribute('hidden', '');
-});
-
-emailInput.addEventListener('blur', function () {
-  var email = emailInput.value;
-  if (!emailExpression.test(email)) {
-    emailError.textContent = 'Please enter a valid email.';
-    emailError.removeAttribute('hidden');
-  }
-});
-
-emailInput.addEventListener('focus', function () {
-  emailError.setAttribute('hidden', '');
-});
-
-submitButton.addEventListener('click', function () {
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
-
-  if (!emailExpression.test(email)) {
-    alert('Email is not valid');
-  } else if (!containsLetterAndNumber(password)) {
-    alert('One or more fields are incorrect');
-  } else {
-    alert('Email: ' + email + '\nPassword: ' + password);
-  }
-});
-
-function containsLetterAndNumber(password) {
-  var hasNumber = false;
   var hasLetter = false;
+  var hasNumber = false;
+
   for (var i = 0; i < password.length; i++) {
-    var character = password.charAt(i);
-    if (!isNaN(character) && character != ' ') {
-      hasNumber = true;
-    } else if (character.toUpperCase() != character.toLowerCase()) {
+    var charCode = password.charCodeAt(i);
+    if (
+      (charCode >= 65 && charCode <= 90) ||
+      (charCode >= 97 && charCode <= 122)
+    ) {
       hasLetter = true;
-    }
-    if (hasNumber && hasLetter) {
-      return true;
+    } else if (
+      !isNaN(parseInt(password.charAt(i))) &&
+      isFinite(password.charAt(i))
+    ) {
+      hasNumber = true;
     }
   }
-  return false;
+
+  if (password.length < 8 || !hasLetter || !hasNumber) {
+    document.getElementById("password-error").textContent =
+      "One of the fields is not valid.";
+    return;
+  }
+  document.getElementById("password-error").textContent = "";
 }
+
+function clearPassword() {
+  passwordInput.value = "";
+  document.getElementById("password-error").textContent = "";
+}
+
+function validateEmail() {
+  var email = emailInput.value.trim();
+  var emailError = document.getElementById("email-error");
+
+  if (!emailExpression.test(email)) {
+    emailError.textContent = "Please enter a valid email.";
+  } else {
+    emailError.textContent = "";
+  }
+}
+
+function clearEmail() {
+  var emailError = document.getElementById("email-error");
+  emailError.textContent = "";
+}
+
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  var logIn = validateEmail() && validatePassword();
+  if (logIn) {
+    alert("Email: " + email + "\nPassword: " + password);
+  } else {
+    alert("One or more of the fields are not valid.");
+  }
+});
