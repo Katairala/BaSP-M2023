@@ -100,6 +100,7 @@ The objective of this week was to understand the syntax of JavaScript in order t
 ### Week 06
 
 For this week, we created the login and sign up page with HTML and CSS, connected it to the landing page, and used JavaScript to create different events when filling out the forms.
+Through the following link, you can access my repository to see the updated index for this week: https://katairala.github.io/BaSP-M2023/week-06/views/index.html
 
 ## Author
 
