@@ -15,7 +15,11 @@
   </head>
   <body>
     <aside class="aside">
-      <img class="img-aside" src="../../assets/Logo2.png" alt="Logo MegaRocket" />
+      <img
+        class="img-aside"
+        src="../../assets/Logo2.png"
+        alt="Logo MegaRocket"
+      />
       <navbar id="navmain">
         <div class="list">
           <ul>
@@ -141,12 +145,12 @@
           <form>
             <div class="section-3-container">
               <div class="label-container">
-                <label for="name"> Name </label>
-                <input type="text" name="name" placeholder="Name" />
+                <label for="first-name"> Name </label>
+                <input type="text" name="first-name" placeholder="Name" />
               </div>
               <div class="label-container">
                 <label for="name"> Last Name </label>
-                <input type="text" name="lastname" placeholder="Last Name" />
+                <input type="text" name="last-name" placeholder="Last Name" />
               </div>
               <div class="label-container">
                 <label for="email"> Email </label>
@@ -154,21 +158,19 @@
               </div>
               <div class="checkbox-container">
                 <p>Motive</p>
-                <div class="motive-container">
-                  <input type="checkbox" name="checkbox1" />
-                  <label for="checkbox1">
-                    I want to know about memberships and costs.
-                  </label>
-                </div>
-                <div class="motive-container">
-                  <input type="checkbox" name="checkbox2" />
-                  <label for="checkbox2">
-                    I want to make a question or a sugestion.
-                  </label>
-                </div>
-                <div class="motive-container">
-                  <input type="checkbox" name="checkbox3" />
-                  <label for="checkbox3"> I want to make a claim. </label>
+                <div class="checkbox-container">
+                  <select name="motive" id="motive-select">
+                    <option value="select-motive">
+                      Please select a motive.
+                    </option>
+                    <option value="memberships-costs">
+                      I want to know about memberships and costs.
+                    </option>
+                    <option value="question-suggestion">
+                      I want to make a question or a suggestion.
+                    </option>
+                    <option value="claim">I want to make a claim.</option>
+                  </select>
                 </div>
                 <div class="message">
                   <p>Message</p>
@@ -275,11 +277,14 @@
       <footer>
         <div>
           <a href="#"><img src="../../assets/Icono-tw.png" alt="Twitter" /></a>
-          <a href="#"><img src="../../assets/Icono-ig.png" alt="Instagram" /></a>
+          <a href="#"
+            ><img src="../../assets/Icono-ig.png" alt="Instagram"
+          /></a>
           <a href="#"><img src="../../assets/Icono-fb.png" alt="Facebook" /></a>
         </div>
         <p>Copyright &copy; 2023 MegaRocket SA. All rights reserved.</p>
       </footer>
     </main>
+    <script src="../js/contact.js"></script>
   </body>
 </html>

@@ -246,10 +246,6 @@ label {
   width: 100%;
 }
 
-.checkbox-container label {
-  margin: 0 0 0 20px;
-}
-
 .message {
   padding: 20px 0 20px 0;
   font-weight: 500;
@@ -381,7 +377,7 @@ label {
     display: flex;
     flex-direction: column;
   }
-  
+
   header {
     margin-left: 11rem;
   }
@@ -445,11 +441,6 @@ label {
 
   .label-container {
     width: 45%;
-  }
-
-  .checkbox-container {
-    width: 100%;
-    margin-top: 14px;
   }
 
   .section-3-buttons {
