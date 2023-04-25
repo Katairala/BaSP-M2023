@@ -68,15 +68,15 @@ input {
   margin-top: 5px;
 }
 
-p{
-    font-size: 0.8rem;
-    color: red;
+p {
+  font-size: 0.8rem;
+  color: red;
 }
 
 @media only screen and (min-width: 600px) {
-    form {
-      height: 57rem;
-    }
+  form {
+    height: 57rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
