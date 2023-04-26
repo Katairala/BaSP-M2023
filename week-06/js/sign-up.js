@@ -182,7 +182,7 @@ function clearID() {
 }
 
 function validatePhone() {
-  var phone = this.value;
+  var phone = phoneField.value;
   var phoneError = document.getElementById('phone-error');
   var numbers = '0123456789';
   for (var i = 0; i < phone.length; i++) {
@@ -204,7 +204,7 @@ function clearPhone() {
 }
 
 function validateZip() {
-  var zip = this.value;
+  var zip = zipInput.value;
   var zipError = document.getElementById('zip-error');
   var numbers = '0123456789';
   for (var i = 0; i < zip.length; i++) {
@@ -228,7 +228,7 @@ function clearZip() {
 }
 
 function validateCity() {
-  var city = this.value;
+  var city = cityInput.value;
   var cityError = document.getElementById('city-error');
   var alphanumeric =
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -253,7 +253,7 @@ function clearCity() {
 }
 
 function validateAddress() {
-  var address = this.value;
+  var address = addressInput.value;
   var addressError = document.getElementById('address-error');
   var alphanumeric =
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -307,27 +307,25 @@ submitButton.addEventListener('click', function (event) {
   if (signUp) {
     alert(
       'Name: ' +
-        name +
+      nameInput.value.trim() +
         '\nLast name: ' +
-        lastname +
+        lastNameInput.value.trim() +
         '\nID: ' +
-        id +
+        idInput.value +
         '\nDate of birth: ' +
-        date +
+        dateInput +
         '\nPhone number: ' +
-        phone +
+        phoneField.value +
         '\nAddress: ' +
-        address +
+       addressInput.value +
         '\nCity: ' +
-        city +
+        cityInput.value +
         '\nZip code: ' +
-        zip +
+        zipInput.value +
         '\nEmail: ' +
-        email +
+        emailInput.value.trim() +
         '\nPassword: ' +
-        password +
-        '\nRepeat password: ' +
-        repeat
+        passwordField.value 
     );
   } else {
     alert('One or more of the fields are not valid.');
