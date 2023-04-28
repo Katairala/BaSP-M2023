@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Mega Rocket GYM</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="menu">
+          <img src="../../assets/Icono-8.png" alt="menu-icon" />
+        </div>
+        <div class="logo-1">
+          <img src="../../assets/Logo.png" alt="Logo MegaRocket" />
+        </div>
+        <div class="branding">
+          <img src="../../assets/MR.png" alt="Logo MegaRocket 2" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-main">
+        <h1 class="main-title">Sing In</h1>
+        <form action="">
+          <div class="back-button">
+            <a class="back-button" href="../views/index.html"
+              ><img src="../../assets/Icono-7.png" alt=""
+            /></a>
+          </div>
+          <h2 class="title">Login</h2>
+          <label for="user-email">
+            <img
+              class="username-img"
+              src="../../assets/signin.png"
+              alt="mail icon"
+            />
+            <input id="email" type="text" name="email" />
+          </label>
+          <p id="email-error" class="error-message"></p>
+          <label>
+            <img
+              class="password-img"
+              src="../../assets/password.png"
+              alt="lock icon"
+            />
+            <input id="password" type= "password" name="password" />
+          </label>
+          <p id="password-error" class="error-message"></p>
+          <div class="remember-me">
+            <input type="checkbox" name="checkbox" />
+            <label for="checkbox"> Remember me </label>
+          </div>
+          <div>
+            <img
+              class="key"
+              src="../../assets/forgotpassword.png"
+              alt="key icon"
+            />
+            <a href="a" class="link">Forgot your password?</a>
+          </div>
+          <button id="submit">Sign In</button>
+          <button id="button-signup">Sign Up</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <a href="#"><img src="../../assets/Icono-tw.png" alt="Twitter" /></a>
+        <a href="#"><img src="../../assets/Icono-ig.png" alt="Instagram" /></a>
+        <a href="#"><img src="../../assets/Icono-fb.png" alt="Facebook" /></a>
+      </div>
+      <p>Copyright &copy; 2023 MegaRocket SA. All rights reserved.</p>
+    </footer>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
