@@ -2,6 +2,7 @@ var passwordInput = document.getElementById('password');
 var emailInput = document.getElementById('email');
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 var submitButton = document.getElementById('submit');
+var url = 'https://api-rest-server.vercel.app/login';
 
 passwordInput.addEventListener('blur', validatePassword);
 passwordInput.addEventListener('focus', clearPassword);
@@ -30,7 +31,7 @@ function validatePassword() {
 
   if (password.length < 8 || !hasLetter || !hasNumber) {
     document.getElementById('password-error').textContent =
-      'One of the fields is not valid.';
+      'One of the fields are not valid.';
     return false;
   }
   document.getElementById('password-error').textContent = '';
@@ -65,27 +66,23 @@ submitButton.addEventListener('click', function (event) {
   var isEmailValid = validateEmail();
   var isPasswordValid = validatePassword();
 
-  if (isEmailValid && isPasswordValid) {
-    var formData = new FormData();
-    formData.append('email', emailInput.value);
-    formData.append('password', passwordInput.value);
-
-    fetch('url_del_endpoint', {
-      method: 'POST',
-      body: formData
-    })
-      .then(function (response) {
-        if (response.ok) {
-          alert('Datos enviados correctamente');
-        } else {
-          throw new Error('Error al enviar los datos');
-        }
-      })
-      .catch(function (error) {
-        alert(error.message);
-      });
-  } else {
-    alert('One or more of the fields are not valid.');
+  if (!isEmailValid || !isPasswordValid) {
+    alert('One of the fields are not valid.');
+    return;
   }
-});
 
+  fetch(`${url}?email=${emailInput.value}&password=${passwordInput.value}`)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (data.success) {
+        alert('Successful Login! ' + data.msg);
+      } else {
+        alert('Login failed: ' + data.msg);
+      }
+    })
+    .catch(function (error) {
+      alert(error.msg);
+    });
+});
