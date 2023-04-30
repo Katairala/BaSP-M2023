@@ -1,15 +1,18 @@
 var submitButton = document.getElementById('submit');
 var nameInput = document.getElementById('name');
+var nameError = document.getElementById('name-error');
 var lastNameInput = document.getElementById('lastname');
+var lastNameError = document.getElementById('lastname-error');
 var emailInput = document.getElementById('email');
-var passwordField = document.getElementById('password');
-var repeatPasswordField = document.getElementById('Repeat');
-var dateField = document.getElementById('date');
-var IDField = document.getElementById('ID');
-var phoneField = document.getElementById('phone');
+var passwordInput = document.getElementById('password');
+var repeatPasswordInput = document.getElementById('Repeat');
+var dateInput = document.getElementById('date');
+var idInput = document.getElementById('ID');
+var phoneInput = document.getElementById('phone');
 var zipInput = document.getElementById('zip');
 var cityInput = document.getElementById('City');
 var addressInput = document.getElementById('address');
+var url = 'https://api-rest-server.vercel.app/signup';
 
 nameInput.addEventListener('blur', validateName);
 nameInput.addEventListener('focus', clearNameError);
@@ -17,16 +20,16 @@ lastNameInput.addEventListener('blur', validateLastName);
 lastNameInput.addEventListener('focus', clearLastNameError);
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', clearEmail);
-passwordField.addEventListener('blur', validatePassword);
-passwordField.addEventListener('focus', clearPassword);
-repeatPasswordField.addEventListener('blur', validateRepeatPassword);
-repeatPasswordField.addEventListener('focus', clearRepeatPassword);
-dateField.addEventListener('blur', validateDate);
-dateField.addEventListener('focus', clearDate);
-IDField.addEventListener('blur', validateID);
-IDField.addEventListener('focus', clearID);
-phoneField.addEventListener('blur', validatePhone);
-phoneField.addEventListener('focus', clearPhone);
+passwordInput.addEventListener('blur', validatePassword);
+passwordInput.addEventListener('focus', clearPassword);
+repeatPasswordInput.addEventListener('blur', validateRepeatPassword);
+repeatPasswordInput.addEventListener('focus', clearRepeatPassword);
+dateInput.addEventListener('blur', validateDate);
+dateInput.addEventListener('focus', clearDate);
+idInput.addEventListener('blur', validateID);
+idInput.addEventListener('focus', clearID);
+phoneInput.addEventListener('blur', validatePhone);
+phoneInput.addEventListener('focus', clearPhone);
 zipInput.addEventListener('blur', validateZip);
 zipInput.addEventListener('focus', clearZip);
 cityInput.addEventListener('blur', validateCity);
@@ -36,45 +39,46 @@ addressInput.addEventListener('focus', clearAddress);
 
 function validateName() {
   var name = nameInput.value.trim();
-  var nameError = document.getElementById('name-error');
+
   for (var i = 0; i < name.length; i++) {
     var charCode = name.charCodeAt(i);
-    if (
-      ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) ||
-      name.length < 3
-    ) {
-      nameError.textContent =
-        'Name must contain only letters and have at least 3 characters.';
+    if ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
+      nameError.textContent = 'The name must contain only Letters!';
       return;
     }
   }
+  if (name.length < 3) {
+    nameError.textContent = 'The name must contain at least 3 letters!';
+    return;
+  }
   nameError.textContent = '';
+
+  return true;
 }
 
 function clearNameError() {
-  var nameError = document.getElementById('name-error');
   nameError.textContent = '';
 }
 
 function validateLastName() {
   var lastName = lastNameInput.value.trim();
-  var lastNameError = document.getElementById('lastname-error');
   for (var i = 0; i < lastName.length; i++) {
     var charCode = lastName.charCodeAt(i);
-    if (
-      ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) ||
-      lastName.length < 3
-    ) {
-      lastNameError.textContent =
-        'Last name must contain only letters and have at least 3 characters.';
+    if ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
+      lastNameError.textContent = 'El apellido debe contener solo letras.';
       return;
     }
   }
+  if (lastName.length < 3) {
+    lastNameError.textContent = 'El apellido debe tener al menos 3 caracteres.';
+    return;
+  }
   lastNameError.textContent = '';
+
+  return true;
 }
 
 function clearLastNameError() {
-  var lastNameError = document.getElementById('lastname-error');
   lastNameError.textContent = '';
 }
 
@@ -86,6 +90,7 @@ function validateEmail() {
     emailError.textContent = 'Please enter a valid email.';
   } else {
     emailError.textContent = '';
+    return true;
   }
 }
 
@@ -95,7 +100,7 @@ function clearEmail() {
 }
 
 function validatePassword() {
-  var password = passwordField.value;
+  var password = passwordInput.value;
   var hasLetter = false;
   var hasNumber = false;
 
@@ -120,16 +125,18 @@ function validatePassword() {
     return;
   }
   document.getElementById('password-error').textContent = '';
+
+  return true;
 }
 
 function clearPassword() {
-  passwordField.value = '';
+  passwordInput.value = '';
   document.getElementById('password-error').textContent = '';
 }
 
 function validateRepeatPassword() {
-  var password = passwordField.value;
-  var repeatPassword = repeatPasswordField.value;
+  var password = passwordInput.value;
+  var repeatPassword = repeatPasswordInput.value;
 
   if (repeatPassword !== password) {
     document.getElementById('repeat-error').textContent =
@@ -146,13 +153,18 @@ function clearRepeatPassword() {
 
 function validateDate() {
   var dateInput = document.getElementById('date').value;
-  var dateOfBirth = new Date(dateInput);
+  var dateEl = dateInput.split('-');
+  var formattedDate = dateEl[2] + '/' + dateEl[1] + '/' + dateEl[0];
+  var dateOfBirth = new Date(formattedDate);
   var currentDate = new Date();
   var adultDate = new Date();
   adultDate.setFullYear(currentDate.getFullYear() - 18);
   if (dateOfBirth > adultDate) {
     document.getElementById('date-error').textContent = 'You must be an adult';
+    return false;
   }
+  document.getElementById('date-error').textContent = '';
+  return true;
 }
 
 function clearDate() {
@@ -175,6 +187,8 @@ function validateID() {
       'ID must be at least 8 digits long';
     return;
   }
+
+  return true;
 }
 
 function clearID() {
@@ -182,7 +196,7 @@ function clearID() {
 }
 
 function validatePhone() {
-  var phone = phoneField.value;
+  var phone = phoneInput.value;
   var phoneError = document.getElementById('phone-error');
   var numbers = '0123456789';
   for (var i = 0; i < phone.length; i++) {
@@ -195,6 +209,7 @@ function validatePhone() {
     phoneError.textContent = 'Phone number field must have 10 digits';
   } else {
     phoneError.textContent = '';
+    return true;
   }
 }
 
@@ -219,6 +234,7 @@ function validateZip() {
       'Zip must contain only numbers and have between 4 and 5 digits';
   } else {
     zipError.textContent = '';
+    return true;
   }
 }
 
@@ -245,6 +261,7 @@ function validateCity() {
     }
     cityError.textContent = '';
   }
+  return true;
 }
 
 function clearCity() {
@@ -283,6 +300,8 @@ function validateAddress() {
       addressError.textContent = '';
     }
   }
+
+  return true;
 }
 
 function clearAddress() {
@@ -292,52 +311,87 @@ function clearAddress() {
 
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
-  var isNameValid = validateName();
-  var isLastNameValid = validateLastName();
-  var isEmailValid = validateEmail();
-  var isPasswordValid = validatePassword();
-  var isDateValid = validateDate();
-  var isIdValid = validateID();
-  var isPhoneValid = validatePhone();
-  var isZipValid = validateZip();
-  var isCityValid = validateCity();
-  var isAddressValid = validateAddress();
 
-  var signUp =
-    isNameValid &&
-    isLastNameValid &&
-    isEmailValid &&
-    isPasswordValid &&
-    isDateValid &&
-    isIdValid &&
-    isPhoneValid &&
-    isZipValid &&
-    isCityValid &&
-    isAddressValid;
-  if (signUp) {
-    alert(
-      'Name: ' +
-      nameInput.value.trim() +
-        '\nLast name: ' +
-        lastNameInput.value.trim() +
-        '\nID: ' +
-        idInput.value +
-        '\nDate of birth: ' +
-        dateInput +
-        '\nPhone number: ' +
-        phoneField.value +
-        '\nAddress: ' +
-       addressInput.value +
-        '\nCity: ' +
-        cityInput.value +
-        '\nZip code: ' +
-        zipInput.value +
-        '\nEmail: ' +
-        emailInput.value.trim() +
-        '\nPassword: ' +
-        passwordField.value 
-    );
+  var isFormValid = true;
+
+  isFormValid = validateName() && isFormValid;
+  isFormValid = validateLastName() && isFormValid;
+  isFormValid = validateEmail() && isFormValid;
+  isFormValid = validatePassword() && isFormValid;
+  isFormValid = validateRepeatPassword() && isFormValid;
+  isFormValid = validateDate() && isFormValid;
+  isFormValid = validateID() && isFormValid;
+  isFormValid = validatePhone() && isFormValid;
+  isFormValid = validateZip() && isFormValid;
+  isFormValid = validateCity() && isFormValid;
+  isFormValid = validateAddress() && isFormValid;
+
+  if (isFormValid) {
+    fetch(`${url}?name=${nameInput.value}&lastName=${lastNameInput.value}&email=${emailInput.value}
+    &password=${passwordInput.value}&date=${dateInput.value}&id=${idInput.value}&phone=${phoneInput.value}&
+    zip=${zipInput.value}&city=${cityInput.value}&address=${addressInput.value}`)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var formData = {
+          name: nameInput.value,
+          lastName: lastNameInput.value,
+          email: emailInput.value,
+          password: passwordInput.value,
+          date: dateInput.value,
+          id: idInput.value,
+          phone: phoneInput.value,
+          zip: zipInput.value,
+          city: cityInput.value,
+          address: addressInput.value,
+        };
+        localStorage.setItem('formData', JSON.stringify(formData));
+
+        alert(
+          'Successful registration:\nName: ' +
+            nameInput.value +
+            '\nLast-Name: ' +
+            lastNameInput.value +
+            '\nEmail: ' +
+            emailInput.value +
+            '\nPassword: ' +
+            passwordInput.value +
+            '\nBirthdate: ' +
+            dateInput.value +
+            '\nID: ' +
+            idInput.value +
+            '\nPhone: ' +
+            phoneInput.value +
+            '\nZip: ' +
+            zipInput.value +
+            '\nCity: ' +
+            cityInput.value +
+            '\nAddress: ' +
+            addressInput.value
+        );
+      })
+      .catch(function (error) {
+        alert(error.msg);
+      });
   } else {
-    alert('One or more of the fields are not valid.');
+    alert('Please correct the errors in the form');
   }
 });
+
+window.onload = function () {
+  var formData = localStorage.getItem('formData');
+  if (formData) {
+    formData = JSON.parse(formData);
+    nameInput.value = formData.name;
+    lastNameInput.value = formData.lastName;
+    emailInput.value = formData.email;
+    passwordInput.value = formData.password;
+    dateInput.value = formData.date;
+    idInput.value = formData.id;
+    phoneInput.value = formData.phone;
+    zipInput.value = formData.zip;
+    cityInput.value = formData.city;
+    addressInput.value = formData.address;
+  }
+};
