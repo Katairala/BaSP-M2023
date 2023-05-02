@@ -34,7 +34,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About The Project  :rocket:
 
 Become a Software Professional 2023 it's course by Radium Rocket. The main objective of the weekly assignments for this course is to develope a system for the company "MEGA ROCKET SA", where they can manage and organize the gym's schedule grid, employee schedules, activities and the memberships with it's members.
 
@@ -48,7 +48,7 @@ The system features a main screen (Landing) that contains:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+### Built With :dizzy:
 
 This website was built with:
 
@@ -58,7 +58,7 @@ This website was built with:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Usage
+## Usage :motor_scooter:
 
 ### Installation
 
@@ -68,7 +68,7 @@ This website was built with:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Roadmap
+## Roadmap 	:world_map:
 
 ### Week 01
 
@@ -100,13 +100,22 @@ The objective of this week was to understand the syntax of JavaScript in order t
 ### Week 06
 
 For this week, we created the login and sign up page with HTML and CSS, connected it to the landing page, and used JavaScript to create different events when filling out the forms.
+With a blur event, an error message is displayed if the field does not meet the validations, and with a focus event, the error message disappears. In addition, when the submit button is pressed, different alerts appear, one for an error in case the validations are not met, and one confirming the entered data if they were valid.
 Through the following link, you can access my repository to see the updated index for this week: https://katairala.github.io/BaSP-M2023/week-06/views/index.html
 
-## Author
+### Week 07
+
+On this week's assigment we had to extend the forms from week 06 so that when the confirmation buttons are pressed, the data loaded in them is sent to a web server through an HTTP request from JavaScript. In each form, we made an HTTP request using the Fetch method of JavaScript, sending all the data loaded in the form. If the response is successful, a confirmation alert is displayed and the data is loaded into the browser's LocalStorage. If it is not successful, an error alert is displayed. 
+The only user who can successfully log in is:
+email: rose@radiumrocket.com
+password: BaSProfessional1
+Here is the index of this week so you can check my work: https://katairala.github.io/BaSP-M2023/week-07/views/index.html
+
+## Author :raising_hand_woman:
 
 - Katherine Airala
 
-## Contact
+## Contact :love_letter:
 
 Gmail: Katherine.airala@gmail.com
 
