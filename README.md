@@ -109,7 +109,7 @@ On this week's assigment we had to extend the forms from week 06 so that when th
  The only user who can successfully log in is:
 - email: rose@radiumrocket.com
 - password: BaSProfessional1
-Here is the index of this week so you can check my work: https://katairala.github.io/BaSP-M2023/week-07/views/index.html
+- Here is the index of this week so you can check my work: https://katairala.github.io/BaSP-M2023/week-07/views/index.html
 
 ## Author :raising_hand_woman:
 
