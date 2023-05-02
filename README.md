@@ -106,9 +106,9 @@ Through the following link, you can access my repository to see the updated inde
 ### Week 07
 
 On this week's assigment we had to extend the forms from week 06 so that when the confirmation buttons are pressed, the data loaded in them is sent to a web server through an HTTP request from JavaScript. In each form, we made an HTTP request using the Fetch method of JavaScript, sending all the data loaded in the form. If the response is successful, a confirmation alert is displayed and the data is loaded into the browser's LocalStorage. If it is not successful, an error alert is displayed. 
--The only user who can successfully log in is:
--email: rose@radiumrocket.com
--password: BaSProfessional1
+ The only user who can successfully log in is:
+- email: rose@radiumrocket.com
+- password: BaSProfessional1
 Here is the index of this week so you can check my work: https://katairala.github.io/BaSP-M2023/week-07/views/index.html
 
 ## Author :raising_hand_woman:
