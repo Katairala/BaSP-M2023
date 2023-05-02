@@ -345,7 +345,6 @@ function clearAddress() {
 
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
-
   var isFormValid = true;
 
   isFormValid = validateName() && isFormValid;
