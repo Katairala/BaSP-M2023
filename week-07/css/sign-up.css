@@ -99,3 +99,7 @@ p {
     padding-left: 1rem;
   }
 }
+
+.error {
+  border: 1px solid red;
+}

@@ -44,20 +44,25 @@ function validateName() {
     var charCode = name.charCodeAt(i);
     if ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
       nameError.textContent = 'The name must contain only Letters!';
+      nameInput.classList.add('error');
       return;
     }
   }
+
   if (name.length < 3) {
     nameError.textContent = 'The name must contain at least 3 letters!';
+    nameInput.classList.add('error');
     return;
   }
-  nameError.textContent = '';
 
+  nameError.textContent = '';
+  nameInput.classList.remove('error');
   return true;
 }
 
 function clearNameError() {
   nameError.textContent = '';
+  nameInput.classList.remove('error');
 }
 
 function validateLastName() {
@@ -65,21 +70,23 @@ function validateLastName() {
   for (var i = 0; i < lastName.length; i++) {
     var charCode = lastName.charCodeAt(i);
     if ((charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
-      lastNameError.textContent = 'El apellido debe contener solo letras.';
+      lastNameError.textContent = 'The last name must contain only Letters!';
+      lastNameInput.classList.add('error');
       return;
     }
   }
   if (lastName.length < 3) {
-    lastNameError.textContent = 'El apellido debe tener al menos 3 caracteres.';
+    lastNameError.textContent = 'The last name must contain at least 3 letters!';
+    lastNameInput.classList.add('error');
     return;
   }
   lastNameError.textContent = '';
-
   return true;
 }
 
 function clearLastNameError() {
   lastNameError.textContent = '';
+  lastNameInput.classList.remove('error');
 }
 
 function validateEmail() {
@@ -88,6 +95,7 @@ function validateEmail() {
 
   if (!/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(email)) {
     emailError.textContent = 'Please enter a valid email.';
+    emailInput.classList.add('error');
   } else {
     emailError.textContent = '';
     return true;
@@ -97,6 +105,7 @@ function validateEmail() {
 function clearEmail() {
   var emailError = document.getElementById('email-error');
   emailError.textContent = '';
+  emailInput.classList.remove('error');
 }
 
 function validatePassword() {
@@ -122,6 +131,7 @@ function validatePassword() {
   if (password.length < 8 || !hasLetter || !hasNumber) {
     document.getElementById('password-error').textContent =
       'Password must contain at least 8 characters, one letter and one number.';
+      passwordInput.classList.add('error');
     return;
   }
   document.getElementById('password-error').textContent = '';
@@ -132,6 +142,7 @@ function validatePassword() {
 function clearPassword() {
   passwordInput.value = '';
   document.getElementById('password-error').textContent = '';
+  passwordInput.classList.remove('error');
 }
 
 function validateRepeatPassword() {
@@ -141,6 +152,7 @@ function validateRepeatPassword() {
   if (repeatPassword !== password) {
     document.getElementById('repeat-error').textContent =
       'Passwords do not match.';
+      repeatPasswordInput.classList.add('error');
     return false;
   }
   document.getElementById('repeat-error').textContent = '';
@@ -149,18 +161,21 @@ function validateRepeatPassword() {
 
 function clearRepeatPassword() {
   document.getElementById('repeat-error').textContent = '';
+  repeatPasswordInput.classList.remove('error');
 }
 
 function validateDate() {
-  var dateInput = document.getElementById('date').value;
+  var dateElement = document.getElementById('date');
+  var dateInput = dateElement.value;
   var dateEl = dateInput.split('-');
-  var formattedDate = dateEl[2] + '/' + dateEl[1] + '/' + dateEl[0];
+  var formattedDate = dateEl[1] + '/' + dateEl[0] + '/' + dateEl[2];
   var dateOfBirth = new Date(formattedDate);
   var currentDate = new Date();
-  var adultDate = new Date();
-  adultDate.setFullYear(currentDate.getFullYear() - 18);
-  if (dateOfBirth > adultDate) {
+  var limitDate = new Date();
+  limitDate.setFullYear(limitDate.getFullYear() - 18);
+  if (dateOfBirth.getTime() > limitDate.getTime()) {
     document.getElementById('date-error').textContent = 'You must be an adult';
+    dateElement.classList.add('error');
     return false;
   }
   document.getElementById('date-error').textContent = '';
@@ -168,23 +183,28 @@ function validateDate() {
 }
 
 function clearDate() {
+  var dateElement = document.getElementById('date');
   document.getElementById('date-error').textContent = '';
+  dateElement.classList.remove('error');
 }
 
+
 function validateID() {
-  var idInput = document.getElementById('ID').value;
-  for (var i = 0; i < idInput.length; i++) {
-    var charCode = idInput.charCodeAt(i);
+  var idValue = idInput.value;
+  for (var i = 0; i < idValue.length; i++) {
+    var charCode = idValue.charCodeAt(i);
     if (charCode < 48 || charCode > 57) {
       document.getElementById('id-error').textContent =
         'ID must contain only numbers';
+      idInput.classList.add('error');
       return;
     }
   }
 
-  if (idInput.length < 8) {
+  if (idValue.length < 8) {
     document.getElementById('id-error').textContent =
       'ID must be at least 8 digits long';
+      idInput.classList.add('error');
     return;
   }
 
@@ -193,6 +213,7 @@ function validateID() {
 
 function clearID() {
   document.getElementById('id-error').textContent = '';
+  idInput.classList.remove('error');
 }
 
 function validatePhone() {
@@ -202,11 +223,13 @@ function validatePhone() {
   for (var i = 0; i < phone.length; i++) {
     if (numbers.indexOf(phone[i]) === -1) {
       phoneError.textContent = 'Phone number field must contain only numbers';
+      phoneInput.classList.add('error');
       return;
     }
   }
   if (phone.length !== 10) {
     phoneError.textContent = 'Phone number field must have 10 digits';
+    phoneInput.classList.add('error');
   } else {
     phoneError.textContent = '';
     return true;
@@ -216,6 +239,7 @@ function validatePhone() {
 function clearPhone() {
   var phoneError = document.getElementById('phone-error');
   phoneError.textContent = '';
+  phoneInput.classList.remove('error');
 }
 
 function validateZip() {
@@ -226,12 +250,14 @@ function validateZip() {
     if (numbers.indexOf(zip[i]) === -1) {
       zipError.textContent =
         'Zip must contain only numbers and have between 4 and 5 digits';
+        zipInput.classList.add('error');
       return;
     }
   }
   if (zip.length < 4 || zip.length > 5) {
     zipError.textContent =
       'Zip must contain only numbers and have between 4 and 5 digits';
+      zipInput.classList.add('error');
   } else {
     zipError.textContent = '';
     return true;
@@ -240,6 +266,7 @@ function validateZip() {
 
 function clearZip() {
   var zipError = document.getElementById('zip-error');
+  zipInput.classList.remove('error');
   zipError.textContent = '';
 }
 
@@ -251,11 +278,13 @@ function validateCity() {
   if (city.length < 3) {
     cityError.textContent =
       'City must contain at least 3 alphanumeric characters';
+      cityInput.classList.add('error');
   } else {
     for (var i = 0; i < city.length; i++) {
       if (alphanumeric.indexOf(city[i]) === -1) {
         cityError.textContent =
           'City must contain at least 3 alphanumeric characters';
+          cityInput.classList.add('error');
         return;
       }
     }
@@ -267,6 +296,7 @@ function validateCity() {
 function clearCity() {
   var cityError = document.getElementById('city-error');
   cityError.textContent = '';
+  cityInput.classList.remove('error');
 }
 
 function validateAddress() {
@@ -278,6 +308,7 @@ function validateAddress() {
   if (address.length < 5) {
     addressError.textContent =
       'Address must contain at least 5 characters with letters and numbers';
+      addressInput.classList.add('error');
   } else {
     var spaceIndex = address.indexOf(' ');
     if (
@@ -287,6 +318,7 @@ function validateAddress() {
     ) {
       addressError.textContent =
         'Address must contain at least 5 characters with letters and numbers';
+        addressInput.classList.add('error');
     } else {
       var firstPart = address.substring(0, spaceIndex);
       var secondPart = address.substring(spaceIndex + 1);
@@ -294,6 +326,7 @@ function validateAddress() {
         if (alphanumeric.indexOf(firstPart[i]) === -1) {
           addressError.textContent =
             'Address must contain at least 5 characters with letters and numbers';
+            addressInput.classList.add('error');
           return;
         }
       }
@@ -306,6 +339,7 @@ function validateAddress() {
 
 function clearAddress() {
   var addressError = document.getElementById('address-error');
+  addressInput.classList.remove('error');
   addressError.textContent = '';
 }
 
@@ -347,7 +381,6 @@ submitButton.addEventListener('click', function (event) {
           address: addressInput.value,
         };
         localStorage.setItem('formData', JSON.stringify(formData));
-
         alert(
           'Successful registration:\nName: ' +
             nameInput.value +
@@ -372,7 +405,8 @@ submitButton.addEventListener('click', function (event) {
         );
       })
       .catch(function (error) {
-        alert(error.msg);
+        console.log(error);
+        alert('Error message: ' + error.message);
       });
   } else {
     alert('Please correct the errors in the form');
