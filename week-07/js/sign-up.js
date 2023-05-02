@@ -12,6 +12,10 @@ var phoneInput = document.getElementById('phone');
 var zipInput = document.getElementById('zip');
 var cityInput = document.getElementById('City');
 var addressInput = document.getElementById('address');
+var modal = document.getElementById('myModal');
+var modalTitle = document.getElementById('modal-tittle');
+var modalText = document.getElementById('modal-text');
+var exitButton = document.getElementById('exit');
 var url = 'https://api-rest-server.vercel.app/signup';
 
 nameInput.addEventListener('blur', validateName);
@@ -54,7 +58,6 @@ function validateName() {
     nameInput.classList.add('error');
     return;
   }
-
   nameError.textContent = '';
   nameInput.classList.remove('error');
   return true;
@@ -127,7 +130,6 @@ function validatePassword() {
       hasNumber = true;
     }
   }
-
   if (password.length < 8 || !hasLetter || !hasNumber) {
     document.getElementById('password-error').textContent =
       'Password must contain at least 8 characters, one letter and one number.';
@@ -200,14 +202,12 @@ function validateID() {
       return;
     }
   }
-
   if (idValue.length < 8) {
     document.getElementById('id-error').textContent =
       'ID must be at least 8 digits long';
       idInput.classList.add('error');
     return;
   }
-
   return true;
 }
 
@@ -304,7 +304,6 @@ function validateAddress() {
   var addressError = document.getElementById('address-error');
   var alphanumeric =
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-
   if (address.length < 5) {
     addressError.textContent =
       'Address must contain at least 5 characters with letters and numbers';
@@ -333,7 +332,6 @@ function validateAddress() {
       addressError.textContent = '';
     }
   }
-
   return true;
 }
 
@@ -380,7 +378,7 @@ submitButton.addEventListener('click', function (event) {
           address: addressInput.value,
         };
         localStorage.setItem('formData', JSON.stringify(formData));
-        alert(
+        showModal(
           'Successful registration:\nName: ' +
             nameInput.value +
             '\nLast-Name: ' +
@@ -404,12 +402,23 @@ submitButton.addEventListener('click', function (event) {
         );
       })
       .catch(function (error) {
-        console.log(error);
-        alert('Error message: ' + error.message);
+        showModal('Error message: ' + error.message);
       });
   } else {
-    alert('Please correct the errors in the form');
+    showModal('Please correct the errors in the form');
   }
+});
+
+function showModal(message) {
+  modalTitle.innerHTML = message;
+  modalText.innerHTML = '';
+  modal.style.display = 'block';
+}
+
+var exitButton = document.getElementById('exit');
+exitButton.addEventListener('click', function () {
+  var modal = document.getElementById('myModal');
+  modal.style.display = 'none';
 });
 
 window.onload = function () {

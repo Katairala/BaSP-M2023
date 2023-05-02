@@ -73,6 +73,42 @@ p {
   color: red;
 }
 
+.error {
+  border: 1px solid red;
+}
+
+#myModal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 8rem;
+  left: 0;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header h4 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.modal-content {
+  width: 40%;
+  height: 10rem;
+  margin: 15% auto;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 255, 0.544);
+}
+
+.close {
+  color: white;
+  font-size: 2rem;
+}
+
 @media only screen and (min-width: 600px) {
   form {
     height: 57rem;
@@ -98,8 +134,4 @@ p {
     width: 45%;
     padding-left: 1rem;
   }
-}
-
-.error {
-  border: 1px solid red;
 }
