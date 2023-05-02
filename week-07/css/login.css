@@ -109,7 +109,8 @@ form button {
 
 .modal-header h4 {
   color: white;
-  font-size: 1.5rem;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
 .modal-content {
@@ -118,7 +119,7 @@ form button {
   margin: 15% auto;
   padding: 2rem;
   border-radius: 5px;
-  background-color: rgba(0, 0, 255, 0.544);
+  background-color:#373867;
 }
 
 .close {
